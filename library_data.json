@@ -1,0 +1,62 @@
+[
+    {
+        "no": 1,
+        "title": "Things fall apart",
+        "author": "Chinua Acheba",
+        "status": "on shelf"
+    },
+    {
+        "no": 2,
+        "title": "Purple Hibiscus",
+        "author": "Chimamanda Adichie",
+        "status": "borrowed"
+    },
+    {
+        "no": 3,
+        "title": "The Famished Road",
+        "author": "Ben Okri",
+        "status": "on shelf"
+    },
+    {
+        "no": 4,
+        "title": "Sozaboy",
+        "author": "Ken Saro-Wiwa",
+        "status": "on shelf"
+    },
+    {
+        "no": 5,
+        "title": "Jagua Nana",
+        "author": "Cyprian Ekwensi",
+        "status": "borrowed"
+    },
+    {
+        "no": 6,
+        "title": "The Joys of Motherhood",
+        "author": "Buchi Emecheta",
+        "status": "on shelf"
+    },
+    {
+        "no": 7,
+        "title": "Arrow of God",
+        "author": "Chinua Achebe",
+        "status": "on shelf"
+    },
+    {
+        "no": 8,
+        "title": "Stay with me",
+        "author": "Ayobami Adebayo",
+        "status": "borrowed"
+    },
+    {
+        "no": 9,
+        "title": "The Fishermen",
+        "author": "Chigozie Obioma",
+        "status": "on shelf"
+    },
+    {
+        "no": 10,
+        "title": "Half of a yellow sun",
+        "author": "Chimamanda Adichie",
+        "status": "onshelf"
+    }
+]
