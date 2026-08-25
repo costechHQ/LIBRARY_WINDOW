@@ -31,8 +31,10 @@ def authenticate(username, password):
             user["locked"] = True
 
             return None
-        user["failed_attempts"] = 0
-        return users
+        
+    user["failed_attempts"] = 0
+
+    return user
 
 def is_chief_librarian(user):
     """this handles authorization"""

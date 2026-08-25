@@ -58,5 +58,11 @@
         "title": "Half of a yellow sun",
         "author": "Chimamanda Adichie",
         "status": "onshelf"
+    },
+    {
+        "no": 11,
+        "title": "Python Crash Course",
+        "author": "Oluwa Seyi",
+        "status": "on shelf"
     }
 ]

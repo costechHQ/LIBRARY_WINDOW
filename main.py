@@ -8,6 +8,8 @@ from library.books import (
 
 from library.users import authenticate, is_chief_librarian
 
+current_user = None
+
 def response(code, message):
     return f"{code}: {message}"
 
@@ -90,3 +92,38 @@ def main():
     print("\nLibrary window is open.")
     print("Commands: GET, POST, PUT, DELETE")
     print("Type EXIT to close.\n")
+
+    while True:
+        method = input("Method: ").strip()
+
+        if method.upper() == "EXIT":
+            print("Goodbye.")
+            break
+
+        book_no_input = input("Book number (press Enter if not needed): ").strip()
+
+        if book_no_input:
+            try:
+                book_no = int(book_no_input)
+            except ValueError:
+                print(response(400, "I cannot read this slip"))
+                continue
+        else:
+            book_no = None
+
+        title = input("Title (press Enter if not needed): ").strip()
+        author = input("Author (press Enter if not needed): ").strip()
+        status = input("status (press Enter if not needed): ").strip()
+
+        result = handle_request(
+            method,
+            book_no,
+            title or None,
+            author or None,
+            status or None
+        )
+
+        print(result)
+
+if __name__ == "__main__":
+    main()
