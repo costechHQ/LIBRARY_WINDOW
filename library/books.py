@@ -72,16 +72,18 @@ else:
     save_books(books)
 
 def get_all_books():
-    
+    """displays all the books in the lis"""
     return books
 
 def get_book(book_no):
+    """this function recieves a book number"""
     for book in books:
         if book["no"] == book_no:
             return book
     return None
 
 def add_book(title, author):
+    """impementing POST"""
     new_no = max(book["no"] for book in books) + 1
 
     new_book = {
@@ -97,7 +99,10 @@ def add_book(title, author):
     return new_book
 
 def update_book(book_no, title=None, author=None, status=None):
+    """this function updates book(PUT)"""
 
+    book = get_book(book_no)
+    
     if book is None:
         return None
 
@@ -115,6 +120,7 @@ def update_book(book_no, title=None, author=None, status=None):
     return book
 
 def delete_book(book_no):
+    """This function handles DELETE"""
     book = get_book(book_no)
 
     if book is None:
