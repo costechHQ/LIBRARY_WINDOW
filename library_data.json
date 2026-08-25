@@ -60,12 +60,6 @@
         "status": "onshelf"
     },
     {
-        "no": 11,
-        "title": "Python Crash Course",
-        "author": "Oluwa Seyi",
-        "status": "on shelf"
-    },
-    {
         "no": 12,
         "title": "Clean code",
         "author": "Robert C. Martin",
