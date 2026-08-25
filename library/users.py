@@ -31,7 +31,7 @@ def authenticate(username, password):
             user["locked"] = True
 
             return None
-        
+              
     user["failed_attempts"] = 0
 
     return user

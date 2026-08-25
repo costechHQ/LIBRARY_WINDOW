@@ -72,7 +72,7 @@ else:
     save_books(books)
 
 def get_all_books():
-    """displays all the books in the lis"""
+    """displays all the books in the list"""
     return books
 
 def get_book(book_no):
@@ -102,7 +102,7 @@ def update_book(book_no, title=None, author=None, status=None):
     """this function updates book(PUT)"""
 
     book = get_book(book_no)
-    
+
     if book is None:
         return None
 
