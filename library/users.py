@@ -30,7 +30,7 @@ def authenticate(username, password):
         if user["failed_attempts"] >= 3:
             user["locked"] = True
 
-            return None
+        return None
               
     user["failed_attempts"] = 0
 
