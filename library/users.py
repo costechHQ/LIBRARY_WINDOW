@@ -13,8 +13,8 @@ users = {
     }
 }
 
-def authenticate(usename, password):
-
+def authenticate(username, password):
+    """this function validates login"""
 
     user = users.get(username)
 
@@ -31,4 +31,9 @@ def authenticate(usename, password):
             user["locked"] = True
 
             return None
-        
+        user["failed_attempts"] = 0
+        return users
+
+def is_chief_librarian(user):
+    """this handles authorization"""
+    return user ["position"] == "chief_librarian"
