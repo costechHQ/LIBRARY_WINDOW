@@ -3,7 +3,8 @@ from library.books import (
     get_book,
     add_book,
     update_book,
-    delete_book
+    delete_book, 
+    get_borrowed_books
 )
 
 from library.users import authenticate, is_chief_librarian
@@ -31,12 +32,16 @@ def login():
     return True
 
 def handle_request(method, book_no=None, title=None, author=None, status=None):
+
     if current_user is None:
         return response(401, "Who are you? Sign in first.")
 
     method = method.upper()
 
     if method == "GET":
+        if book_no == "borrowed":
+            return response(200, get_borrowed_books())
+
         if book_no is None:
             return response(200, get_all_books())
 
@@ -86,6 +91,7 @@ def handle_request(method, book_no=None, title=None, author=None, status=None):
     return response(400, "I cannot read this slip")
 
 def main():
+    """validates login"""
     if not login():
         return
 
@@ -102,7 +108,10 @@ def main():
 
         book_no_input = input("Book number (press Enter if not needed): ").strip()
 
-        if book_no_input:
+        if book_no_input.lower() == "borrowed":
+            book_no = "borrowed"
+
+        elif book_no_input:
             try:
                 book_no = int(book_no_input)
             except ValueError:

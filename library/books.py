@@ -130,3 +130,12 @@ def delete_book(book_no):
     save_books(books)
 
     return True
+
+def get_borrowed_books():
+    borrowed_books = []
+
+    for book in books:
+        if book["status"] == "borrowed":
+            borrowed_books.append(book)
+
+    return borrowed_books

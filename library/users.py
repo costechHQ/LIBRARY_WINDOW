@@ -1,12 +1,36 @@
 users = {
-    "chief": {
-        "password": "chief123",
+    "mrs_okafor": {
+        "password": "library2024",
         "position": "chief_librarian",
         "failed_attempts": 0,
         "locked": False
     },
-    "member": {
-        "password": "member123",
+    "bello_jr": {
+        "password": "windowboy",
+        "position": "member",
+        "failed_attempts": 0,
+        "locked": False
+    },
+    "amina_s": {
+        "password": "books4life",
+        "position": "member",
+        "failed_attempts": 0,
+        "locked": False
+    },
+    "tunde_reads": {
+        "password": "password123",
+        "position": "member",
+        "failed_attempts": 0,
+        "locked": False
+    },
+    "chichi_o": {
+        "password": "novels!",
+        "position": "member",
+        "failed_attempts": 0,
+        "locked": False
+    },
+    "baba_musa": {
+        "password": "retired55",
         "position": "member",
         "failed_attempts": 0,
         "locked": False
