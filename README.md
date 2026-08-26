@@ -62,5 +62,4 @@ Functions
 
 WAKATIME ACTIVITIES
 
-
 [![wakatime](https://wakatime.com/badge/user/cf5dfb0e-2b79-4a12-bcfd-ffd79a22a44f/project/85854215-1895-473a-9d35-ae04e86fa1da.svg)](https://wakatime.com/badge/user/cf5dfb0e-2b79-4a12-bcfd-ffd79a22a44f/project/85854215-1895-473a-9d35-ae04e86fa1da)
