@@ -16,20 +16,22 @@ def response(code, message):
 
 def login():
     """requests for user's credentials"""
-    global current_user
 
-    username = input("Username: ")
-    password = input("Password: ")
+    global current_user
+    for attempt in range(3):
+        username = input("Username: ")
+        password = input("Password: ")
 
     user = authenticate(username, password)
 
-    if user is None:
-        print(response(401, "Who are you? Sign in first."))
-        return False
+    if user is not None:
+        current_user = user
+        print(response(200, "Done, here you are."))
+        return True
 
-    current_user = user
-    print(response(200, "Done, here you are."))
-    return True
+    print(response(400, "Who are you? Sign in first."))
+
+    return False
 
 def handle_request(method, book_no=None, title=None, author=None, status=None):
 
@@ -101,6 +103,37 @@ def main():
 
     while True:
         method = input("Method: ").strip()
+
+        if method.upper() == "GET":
+            print("\nGET options:")
+            print("1. Get all books")
+            print("2. Get one book")
+            print("3. Get borrowed books")
+
+            choice = input("Choose an option: ").strip()
+
+            if choice == "1":
+                result = handle_request("GET")
+
+            elif choice == "2":
+                book_no_input = input("Book number: ").strip()
+
+                try:
+                    book_no = int(book_no_input)
+                except ValueError:
+                    print(response(400, "I cannot read this slip"))
+                    continue
+
+                result = handle_request("GET", book_no=book_no)
+
+            elif choice == "3":
+                result = handle_request("GET", book_no="borrowed")
+
+            else:
+                result = response(400, "I cannot read this slip.")
+
+                print(result)
+                continue
 
         if method.upper() == "EXIT":
             print("Goodbye.")
